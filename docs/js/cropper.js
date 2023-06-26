@@ -5,7 +5,7 @@
  * Copyright 2015-present Chen Fengyuan
  * Released under the MIT license
  *
- * Date: 2022-11-20T05:30:46.114Z
+ * Date: 2023-06-26T17:18:33.206Z
  */
 
 (function (global, factory) {
@@ -1610,7 +1610,7 @@
       }
       addListener(cropper, EVENT_POINTER_DOWN, this.onCropStart = this.cropStart.bind(this));
       if (options.zoomable && options.zoomOnWheel) {
-        addListener(cropper, EVENT_WHEEL, this.onWheel = this.wheel.bind(this), {
+        addListener(cropper.querySelector(".".concat(NAMESPACE, "-crop-box")), EVENT_WHEEL, this.onWheel = this.wheel.bind(this), {
           passive: false,
           capture: true
         });

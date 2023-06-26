@@ -9,7 +9,7 @@ import {
   EVENT_POINTER_UP,
   EVENT_RESIZE,
   EVENT_WHEEL,
-  EVENT_ZOOM,
+  EVENT_ZOOM, NAMESPACE,
 } from './constants';
 import {
   addListener,
@@ -44,7 +44,7 @@ export default {
     addListener(cropper, EVENT_POINTER_DOWN, (this.onCropStart = this.cropStart.bind(this)));
 
     if (options.zoomable && options.zoomOnWheel) {
-      addListener(cropper, EVENT_WHEEL, (this.onWheel = this.wheel.bind(this)), {
+      addListener(cropper.querySelector(`.${NAMESPACE}-crop-box`), EVENT_WHEEL, (this.onWheel = this.wheel.bind(this)), {
         passive: false,
         capture: true,
       });
