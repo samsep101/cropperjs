@@ -1,5 +1,5 @@
 {
-  "name": "cropperjs",
+  "name": "edit-cropperjs",
   "description": "JavaScript image cropper.",
   "version": "1.5.13",
   "main": "dist/cropper.common.js",
